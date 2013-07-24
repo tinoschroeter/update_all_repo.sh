@@ -1,0 +1,18 @@
+#!/bin/bash
+
+count=0
+
+for i in *;do 
+  count=$((count+1))
+  if [ $count -gt 6 ] 
+    then count=1 
+     fi
+       if [ -d $i/.svn ]; then
+         cd $i;tput setaf $count && \
+         echo $i: && echo -n ".......................:.s.v.n. " ;svn up;cd ..
+         elif [ -d $i/.git ]; then
+         cd $i;tput setaf $count && \
+         echo $i: && echo -n ".......................:.g.i.t. " ;git pull;cd .. 
+         tput sgr0
+  fi
+done
