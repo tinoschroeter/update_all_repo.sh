@@ -13,6 +13,9 @@ for i in *;do
          elif [ -d $i/.git ]; then
          cd $i;tput setaf $count && \
          echo $i: && echo -n ".......................:.g.i.t. " ;git pull;cd .. 
+         elif [ -d $i/CVS ]; then
+         cd $i;tput setaf $count && \
+         echo $i: && echo -n ".......................:.c.v.s. " ;cvs up;cd ..
          tput sgr0
   fi
 done
