@@ -1,5 +1,4 @@
 #!/bin/bash
-
 count=0
 
 for i in *;do 
@@ -7,15 +6,15 @@ for i in *;do
   if [ $count -gt 6 ] 
     then count=1 
      fi
-       if [ -d $i/.svn ]; then
-         cd $i;tput setaf $count && \
-         echo $i: && echo -n ".......................:.s.v.n. " ;svn up;cd ..
-         elif [ -d $i/.git ]; then
-         cd $i;tput setaf $count && \
-         echo $i: && echo -n ".......................:.g.i.t. " ;git pull;cd .. 
-         elif [ -d $i/CVS ]; then
-         cd $i;tput setaf $count && \
-         echo $i: && echo -n ".......................:.c.v.s. " ;cvs up;cd ..
+       if [ -d "$i/.svn" ]; then
+         cd "$i" || exit ;tput setaf $count && \
+         echo "$i": && echo -n ".......................:.s.v.n. " ;svn up;cd ..
+         elif [ -d "$i/.git" ]; then
+         cd "$i" || exit ;tput setaf $count && \
+         echo "$i:" && echo -n ".......................:.g.i.t. " ;git pull;cd .. 
+         elif [ -d "$i/CVS" ]; then
+         cd "i" || exit ;tput setaf $count && \
+         echo "$i:"  && echo -n ".......................:.c.v.s. " ;cvs up;cd ..
          tput sgr0
   fi
-done
+done 
