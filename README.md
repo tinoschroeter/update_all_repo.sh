@@ -4,7 +4,11 @@
 
 update all repositories with single command.
 
+## Install
+```
+sudo cp update_all_repo /usr/local/bin/
+```
 
-# Screenshot
+## Screenshot
 
 ![screenshot](https://raw.github.com/tinoschroeter/update_all_repo.sh/master/update_all_repo.png)
