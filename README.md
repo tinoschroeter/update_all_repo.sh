@@ -6,7 +6,8 @@ update all repositories with single command.
 
 ## Install
 ```
-sudo cp update_all_repo /usr/local/bin/
+sudo wget -O /usr/local/bin/update_all_repo https://raw.githubusercontent.com/tinoschroeter/update_all_repo.sh/master/update_all_repo \
+&& sudo chmod +x /usr/local/bin/update_all_repo
 ```
 
 ## Screenshot
